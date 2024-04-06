@@ -5,8 +5,8 @@
     resource_group: __resource_group__
     location: __location__
     aks_name: __aks_name__
-    client_id: __"client_id"__
-    client_secret: __"client_secret"__
+    client_id: __client_id__
+    client_secret: __client_secret__
     aks_version: __aks_version__
   tasks:
   - name: Scaling an existed AKS cluster
