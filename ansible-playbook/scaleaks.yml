@@ -2,12 +2,12 @@
   hosts: localhost
   connection: local
   vars:
-    resource_group: _resource_group_
-    location: _location_
-    aks_name: _aks_name_
-    client_id: _"client_id"_
-    client_secret: _"client_secret"_
-    aks_version: _aks_version_
+    resource_group: __resource_group__
+    location: __location__
+    aks_name: __aks_name__
+    client_id: __"client_id"__
+    client_secret: __"client_secret"__
+    aks_version: __aks_version__
   tasks:
   - name: Scaling an existed AKS cluster
     azure_rm_aks:
