@@ -1,0 +1,24 @@
+- name: Scale AKS cluster
+  hosts: localhost
+  connection: local
+  vars:
+    resource_group: myResourceGroup
+    location: eastus
+    aks_name: myAKSCluster
+    username: azureuser
+    client_id: "client_id"
+    client_secret: "client_secret"
+  tasks:
+  - name: Scaling an existed AKS cluster
+    azure_rm_aks:
+        name: "{{ aks_name }}"
+        location: "{{ location }}"
+        resource_group: "{{ resource_group }}"
+        dns_prefix: "{{ aks_name }}"
+        service_principal:
+          client_id: "{{ client_id }}"
+          client_secret: "{{ client_secret }}"
+        agent_pool_profiles:
+          - name: default
+            count: 3
+            vm_size: Standard_D2_v2
