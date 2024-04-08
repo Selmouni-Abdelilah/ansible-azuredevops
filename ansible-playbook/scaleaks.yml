@@ -26,5 +26,3 @@
           enable_auto_scaling: true
           type: VirtualMachineScaleSets
           mode: System
-          max_count: 3
-          min_count: 1
