@@ -19,6 +19,12 @@
           client_id: "{{ client_id }}"
           client_secret: "{{ client_secret }}"
         agent_pool_profiles:
-          - name: default
-            count: 3
-            vm_size: Standard_D2_v2
+        - name: default
+          count: 2
+          vm_size: Standard_B2s
+          enable_auto_scaling: true
+          type: VirtualMachineScaleSets
+          mode: System
+          max_count: 3
+          min_count: 1
+          enable_rbac: true
