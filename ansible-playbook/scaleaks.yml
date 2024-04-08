@@ -23,6 +23,6 @@
         - name: default
           count: 2
           vm_size: Standard_B2s
-          enable_auto_scaling: true
+          enable_auto_scaling: false
           type: VirtualMachineScaleSets
           mode: System
