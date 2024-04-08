@@ -15,6 +15,7 @@
         location: "{{ location }}"
         resource_group: "{{ resource_group }}"
         dns_prefix: "{{ aks_name }}"
+        kubernetes_version: "{{aks_version}}"
         service_principal:
           client_id: "{{ client_id }}"
           client_secret: "{{ client_secret }}"
